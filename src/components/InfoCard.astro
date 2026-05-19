@@ -1,0 +1,104 @@
+---
+
+---
+
+<section class="info-card">
+  <div class="info-card__grid">
+    
+    <!-- ventre side -->
+    <div class="info-card__text">
+      <h2>Hver gang du betaler, giver du noget tilbage</h2>
+      <p>Hver gang du bruger dit Dankort, går 1 øre til dansk natur. Det bliver til millioner af nye træer, sunde skove, flere dyr og bedre liv for både mennesker og natur.
+Du behøver ikke ændre din hverdag. Bare bruge det kort du allerede har.</p>
+
+      <a href="#" class="info-card__button">
+        Se projekterne
+      </a>
+    </div>
+
+    <!-- højre side -->
+    <div class="info-card__image">
+        <img src="/public/img/festival.webp" alt="Festival">
+    </div>
+      <div class="info-card__overlay">
+        <h3>Festivalbilletten = plantning af træer</h3>
+        <p>Musik, fællesskab og oplevelser — og samtidig mere natur i Danmark.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .info-card {
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .info-card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* venstre side */
+  .info-card__text {
+    background: #f2f2f2;
+    padding: 2.5rem;
+    border-radius: 16px;
+  }
+
+  .info-card__text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-card__text p {
+    color: #000;
+    margin-bottom: 2rem;
+  }
+
+  .info-card__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #F70015;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* højre side */
+  .info-card__image {
+    position: relative;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    overflow: hidden;
+  }
+
+  .info-card__overlay {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    width: 100%;
+  }
+
+  .info-card__overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-card__overlay p {
+    font-size: 0.95rem;
+  }
+
+  /* RESPONSIV */
+  @media (max-width: 768px) {
+    .info-card__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
