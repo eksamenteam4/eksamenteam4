@@ -1,0 +1,151 @@
+<!-- -------------HTML START------------- -->
+<section class="apple-pay">
+  <div class="apple-pay-content">
+    <p class="step-number heading-3">4.</p>
+
+    <div class="apple-pay-text">
+      <h2 class="heading-3">Tilføj til Apple Pay</h2>
+
+      <ul class="body-1">
+        <li>Tilføj dit kort i Wallet appen</li>
+        <li>Betal sikkert i butikker og apps</li>
+        <li>Det er nemt, hurtigt og sikkert</li>
+      </ul>
+
+      <a class="apple-button button-large" href="/form/">
+        <span></span>
+        Tilføj til Apple Pay
+      </a>
+    </div>
+  </div>
+
+  <img
+    class="apple-pay-phone"
+    src="/img/applepayphone.webp"
+    alt="Mobil med Apple Pay"
+  />
+</section>
+<!-- -------------HTML SLUT------------- -->
+
+<!-- -------------CSS START------------- -->
+<style>
+  .apple-pay {
+    min-height: 300px;
+    padding: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background-color: var(--color-white);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    overflow: hidden;
+  }
+
+  .apple-pay-content {
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+  }
+
+  .step-number {
+    color: var(--color-red);
+    font-size: var(--small-card-heading-size);
+    line-height: var(--small-card-heading-line-height);
+    font-weight: var(--font-extra-bold);
+  }
+
+  .apple-pay-text h2 {
+    margin-bottom: 22px;
+    font-size: var(--small-card-heading-size);
+    line-height: var(--small-card-heading-line-height);
+  }
+
+  .apple-pay-text ul {
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .apple-pay-text li {
+    margin-bottom: 12px;
+    font-size: var(--small-card-body-size);
+    line-height: var(--small-card-body-line-height);
+  }
+
+  .apple-pay-text li::before {
+    content: "✓";
+    margin-right: 10px;
+    color: #3f7f57;
+  }
+
+  .apple-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 240px;
+    min-height: var(--secondary-button-height);
+    padding: 0 22px;
+    border: 1px solid #111111;
+    border-radius: var(--secondary-button-radius);
+    color: #111111;
+    font-weight: var(--button-font-weight);
+    text-decoration: none;
+  }
+
+  .apple-button span {
+    font-size: var(--icon-size);
+  }
+
+  .apple-pay-phone {
+    width: 240px;
+    height: auto;
+    margin-bottom: -95px;
+  }
+
+  /* Mobil */
+  @media (max-width: 700px) {
+    .apple-pay {
+      min-height: 445px;
+      padding: 30px 24px 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .apple-pay-content {
+      width: 100%;
+      gap: 8px;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .apple-pay-text h2 {
+      margin-bottom: 18px;
+    }
+
+    .apple-pay-text ul {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .apple-pay-text li {
+      margin-bottom: 10px;
+    }
+
+    .apple-button {
+      min-width: var(--secondary-button-width);
+      min-height: var(--secondary-button-height);
+      margin: 0 auto;
+    }
+
+    .apple-pay-phone {
+      width: 178px;
+      margin-bottom: -70px;
+    }
+  }
+</style>
+<!-- -------------CSS SLUT------------- -->
