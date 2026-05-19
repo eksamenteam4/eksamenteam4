@@ -1,0 +1,108 @@
+<!-- -------------HTML START------------- -->
+<section class="apple-pay-info">
+  <div class="apple-pay-text">
+    <h2 class="heading-3">Støt naturen med Apple Pay</h2>
+    <p class="body-1">
+      Betal hurtigt og nemt med Apple Pay - og vær med til at gøre en forskel
+      for dansk natur.
+    </p>
+
+    <a href="/info/">Læs mere om Apple Pay</a>
+  </div>
+
+  <div class="apple-pay-image">
+    <img src="/img/applepayphone.webp" alt="Mobil med Apple Pay" />
+  </div>
+</section>
+<!-- -------------HTML SLUT------------- -->
+
+<!-- -------------CSS START------------- -->
+<style>
+  .apple-pay-info {
+    min-height: 220px;
+    padding: 42px 56px 0;
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-light);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .apple-pay-text {
+    max-width: 420px;
+    align-self: flex-start;
+    padding-top: 4px;
+  }
+
+  .apple-pay-text h2 {
+    margin-bottom: 12px;
+    font-size: var(--small-card-heading-size);
+    line-height: var(--small-card-heading-line-height);
+  }
+
+  .apple-pay-text p {
+    margin-bottom: 24px;
+    font-size: var(--small-card-body-size);
+    line-height: var(--small-card-body-line-height);
+  }
+
+  .apple-pay-text a {
+    font-size: var(--link-font-size);
+    line-height: var(--link-line-height);
+    font-weight: var(--font-extra-bold);
+    text-decoration: none;
+  }
+
+  .apple-pay-image {
+    width: 330px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .apple-pay-image img {
+    width: 210px;
+    height: auto;
+  }
+
+  /* Mobil */
+  @media (max-width: 700px) {
+    .apple-pay-info {
+      min-height: 350px;
+      padding: 26px 24px 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .apple-pay-text {
+      max-width: 100%;
+      align-self: stretch;
+      padding-top: 0;
+    }
+
+    .apple-pay-text h2 {
+      margin-bottom: 10px;
+    }
+
+    .apple-pay-text p {
+      margin-bottom: 14px;
+    }
+
+    .apple-pay-text a {
+      font-size: var(--mobile-text-small);
+      line-height: var(--button-small-line-height);
+    }
+
+    .apple-pay-image {
+      width: 100%;
+    }
+
+    .apple-pay-image img {
+      width: 172px;
+    }
+  }
+</style>
+<!-- -------------CSS SLUT------------- -->

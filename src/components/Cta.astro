@@ -1,0 +1,71 @@
+<!-- -------------HTML START------------- -->
+<section class="cta">
+  <div class="cta-text">
+    <h2 class="heading-3">Hver betaling gør en forskel for dansk natur</h2>
+    <p class="body-1">
+      Med Dankort støtter du naturprojekter, der arbejder for mere vild natur
+      og bedre levevilkår for dyr, planter og mennesker.
+    </p>
+  </div>
+
+  <a class="button-red button-medium" href="/form/">
+    Bestil dit Dankort
+    <span>→</span>
+  </a>
+</section>
+<!-- -------------HTML SLUT------------- -->
+
+<!-- -------------CSS START------------- -->
+<style>
+  .cta {
+    min-height: 110px;
+    padding: 40px 32px;
+    border-radius: var(--radius-card);
+    background-image:
+      linear-gradient(90deg, #00000099, #00000020),
+      url("/img/leafs.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cta-text {
+    max-width: 520px;
+    color: white;
+  }
+
+  .cta-text h2 {
+    margin-bottom: 8px;
+    font-size: var(--small-card-heading-size);
+    line-height: var(--small-card-heading-line-height);
+  }
+
+  .cta-text p {
+    margin-bottom: 0;
+    font-size: var(--small-card-body-size);
+    line-height: var(--small-card-body-line-height);
+  }
+
+  /* Mobil */
+  @media (max-width: 700px) {
+    .cta {
+      min-height: 155px;
+      padding: 28px 22px;
+      background-position: center;
+    }
+
+    .cta-text {
+      max-width: 230px;
+    }
+
+    .cta-text h2 {
+      margin-bottom: 5px;
+    }
+
+  }
+</style>
+<!-- -------------CSS SLUT------------- -->
