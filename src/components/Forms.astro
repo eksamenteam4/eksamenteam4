@@ -1,0 +1,151 @@
+---
+
+---
+<div class="wrapper">
+  <!-- LEFT -->
+  <div class="card left">
+    <div class="step">
+      <span class="number">1.</span>
+      <h2>Dine oplysninger</h2>
+    </div>
+<div class="formsinput">
+    <input type="text" placeholder="Navn" />
+    <input type="text" placeholder="Din telefon" />
+    <input type="text" placeholder="Nuværende bank" />
+    <input type="email" placeholder="Din mail" />
+</div>
+    <label class="checkbox">
+      <input type="checkbox" />
+      <span>
+        Jeg giver samtykke til, at mine oplysninger bruges til at kontakte mig
+        om bestilling eller skifte til Dankort.
+      </span>
+    </label>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="card">
+      <div class="step">
+        <span class="number">2.</span>
+        <h2>Godkend med MitID</h2>
+      </div>
+
+      <button class="button">
+        Godkend med MitID
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="step">
+        <span class="number">3.</span>
+        <h2>Modtag dit nye Dankort</h2>
+      </div>
+
+      <div class="delivery">
+        <div class="icon">✉️</div>
+
+        <div>
+          <p>Dit nye kort er på vej.</p>
+          <p>Vi sender det sikkert til din adresse med posten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 2px solid #d9d9d9;
+    border-radius: 24px;
+    padding: 2rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .number {
+    color: red;
+    font-weight: 700;
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 18px;
+    border: 1px solid #bcbcbc;
+    background: white;
+    margin: 10px;  
+  }
+
+  .formsinput {
+    padding-right: 30px;
+  }
+
+  .checkbox {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .checkbox input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 18px;
+    background: red;
+    color: white;
+    cursor: pointer;
+  }
+
+  .delivery {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    background: #e7e7e7;
+    display: grid;
+    place-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
