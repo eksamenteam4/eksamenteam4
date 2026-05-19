@@ -1,0 +1,39 @@
+<section class="benefits">
+      <div class="gebyr">
+        <h2>Mindre gebyer. <br />Bedre priser.</h2>
+      </div>
+      <div class="benefit_tekst">
+        <p>
+          Når butikker betaler mindre i gebyrer, bliver der mere tilbage til
+          butikkerne, produkterne og priserne i hverdagen.
+        </p>
+        <p>
+          Det betyder færre omkostninger - og flere penge til det, der faktisk
+          betyder noget.
+        </p>
+      </div>
+    </section>
+
+
+<style>
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  .benefit_tekst {
+    max-width: 350px;
+  }
+
+  .gebyr {
+    justify-self: center;
+  }
+
+  @media (min-width: 1200px) {
+    .benefits {
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+    }
+  }
+</style>
