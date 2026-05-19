@@ -1,0 +1,160 @@
+<!-- -------------HTML START------------- -->
+<section class="how-section">
+  <div class="how-left">
+    <div class="how-card-photo">
+      <img src="/img/card.webp" alt="Rødt Dankort" />
+    </div>
+
+    <div class="how-nature">
+      <h3 class="heading-3">Dit kort.<br />Gør en forskel.</h3>
+    </div>
+  </div>
+
+  <div class="how-text-box">
+    <h2 class="heading-2">
+      Du swiper allerede.
+      <span>Nu giver det noget tilbage.</span>
+    </h2>
+
+    <p class="body-1">
+      Med Dankort Øremærket støtter du dansk natur - hver gang du swiper.
+      <strong>Uden det koster dig ekstra.</strong>
+    </p>
+
+    <a class="button-red button-large" href="/form/">
+      Bestil dit Dankort her
+      <span>→</span>
+    </a>
+  </div>
+</section>
+<!-- -------------HTML SLUT------------- -->
+
+<!-- -------------CSS START------------- -->
+<style>
+  .how-section {
+    display: grid;
+    grid-template-columns: 1fr 0.58fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .how-left {
+    display: grid;
+    grid-template-rows: 360px 150px;
+    gap: 24px;
+  }
+
+  .how-card-photo,
+  .how-nature,
+  .how-text-box {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+  }
+
+  .how-card-photo {
+    background-color: var(--color-image-light);
+  }
+
+  .how-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .how-nature {
+    padding: 34px;
+    background-image:
+      linear-gradient(90deg, #00000099, #00000033),
+      url("/img/grass.webp");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .how-nature h3 {
+    margin-bottom: 0;
+  }
+
+  .how-text-box {
+    padding: 60px 48px 46px;
+    background-color: var(--color-card-light);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .how-text-box h2 {
+    margin-bottom: 28px;
+  }
+
+  .how-text-box h2 span {
+    color: var(--color-red);
+    display: block;
+  }
+
+  .how-text-box p {
+    margin-bottom: 0;
+  }
+
+  .how-text-box .button-red {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  /* Desktop: gør kun desktop-versionen højere */
+  @media (min-width: 701px) {
+    .how-left {
+      grid-template-rows: 430px 170px;
+      gap: 28px;
+    }
+
+    .how-text-box {
+      padding: 74px 48px 52px;
+    }
+  }
+
+  /* Mobil */
+  @media (max-width: 700px) {
+    .how-section {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .how-left {
+      display: contents;
+    }
+
+    .how-card-photo {
+      order: 1;
+      height: auto;
+      aspect-ratio: 1.22 / 1;
+    }
+
+    .how-text-box {
+      order: 2;
+      min-height: 315px;
+      padding: 34px 26px 26px;
+    }
+
+    .how-nature {
+      order: 3;
+      min-height: 92px;
+      padding: 20px;
+    }
+
+    .how-card-photo img {
+      object-fit: cover;
+    }
+
+    .how-text-box h2 {
+      margin-bottom: 18px;
+    }
+
+    .how-text-box .button-red {
+      margin-top: 32px;
+    }
+  }
+</style>
+<!-- -------------CSS SLUT------------- -->
