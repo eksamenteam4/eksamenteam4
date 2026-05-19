@@ -1,0 +1,129 @@
+---
+
+---
+<section class="map">
+  <div class="map__grid">
+
+    <!-- venstre side -->
+    <div class="map__text">
+      <h3>Hvor ligger området?</h3>
+      <p>Storebælt Klint ligger ved Korsør tæt på Storebæltsbroen på Sjælland.</p>
+      <a href="#">Åben i Google Maps</a>
+    </div>
+
+    <!-- MAP -->
+    <div class="map__image">
+      <img src="/img/map.jpg" alt="Kort">
+    </div>
+
+    <!-- STATS -->
+    <div class="map__stats">
+      <h3>Så meget har vi støttet indtil nu</h3>
+
+      <div class="map__stats-grid">
+
+        <div class="map__stat">
+          <div class="icon">🌿</div>
+          <strong>12.4 mio. kr.</strong>
+          <span>Doneret til dansk natur</span>
+        </div>
+
+        <div class="map__stat">
+          <div class="icon">🌍</div>
+          <strong>270 ha</strong>
+          <span>Beskyttet natur</span>
+        </div>
+
+        <div class="map__stat">
+          <div class="icon">🐝</div>
+          <strong>8 projekter</strong>
+          <span>Støttet gennem Øremærket</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .map {
+    padding: 2rem;
+  }
+
+  .map__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .map__text,
+  .map__image,
+  .map__stats {
+    background: #E8F5EA;
+    border-radius: 16px;
+    padding: 1.5rem;
+  }
+
+  .map__text h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .map__text p {
+    margin-bottom: 1rem;
+    color: #F6F6F6;
+  }
+
+  .map__text a {
+    font-size: 0.9rem;
+    color: #507063;
+    text-decoration: underline;
+  }
+
+  .map__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .map__stats h3 {
+    margin-bottom: 1rem;
+  }
+
+  .map__stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .map__stat {
+    text-align: center;
+  }
+
+  .map__stat .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .map__stat strong {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .map__stat span {
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .map__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .map__stats-grid {
+      justify-content: space-around;
+    }
+  }
+</style>
