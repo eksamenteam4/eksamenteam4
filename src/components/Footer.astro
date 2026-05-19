@@ -1,0 +1,150 @@
+<footer class="footerdk">
+  <div class="footer_container">
+    <div class="hvid_boks">
+      <div class="dansk_flag">
+        <button>
+          <img
+            src="https://images.ctfassets.net/5zfcs7jygjfr/30sLyRuzedjDwR0NxUKDrM/d0af63b2604183753b4ff1b3fe829965/da-dk.svg"
+            alt="Dansk"
+          />
+          <span>Dansk</span>
+        </button>
+      </div>
+      <div class="section_3">
+        <div class="dankort">
+          <h4 class="dankort_overskrift">Dankort</h4>
+          <ul>
+            <li class="om_dankort">Om dankort</li>
+            <li class="presse">Presse</li>
+            <li class="download_logoer">Download logoer</li>
+          </ul>
+        </div>
+        <div class="support">
+          <h4 class="support_overskrift">Support</h4>
+          <ul>
+            <li class="kontakt_salg">Kontakt salg</li>
+            <li class="kontakt_kundeservice">Kontakt kundeservice</li>
+            <li class="support_erhverv">Support erhverv</li>
+            <li class="support_privat">Support privat</li>
+          </ul>
+        </div>
+        <div class="politikker">
+          <h4 class="politikker_overskrift">Politikker</h4>
+          <ul>
+            <li class="privatlivspolitikker">Privatlivspolitikker</li>
+            <li class="cookies">Cookies</li>
+            <li class="aee_regulativ">AEE regulativ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="rod_boks">
+      <img
+        class="footer_logo"
+        src="https://images.ctfassets.net/5zfcs7jygjfr/3HEWkqTIVub9388fKWPZ9U/0bd047fb3090ff1ecf606d1f23779455/DankortLOGO70x42.svg"
+        alt="logo"
+      />
+      <p class="tagline">Når vi handler sammen</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hvid_boks {
+    flex: 3;
+    background-color: #d0d0cf;
+    border-radius: 25px;
+    padding: 30px;
+  }
+
+  .dansk_flag {
+    margin-bottom: 40px;
+  }
+
+  .section_3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #d0d0cf;
+    align-items: flex-start;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .rod_boks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: #e21e27;
+    border-radius: 25px;
+  }
+  /* Den røde pil */
+  .section_3 li {
+    position: relative;
+    list-style: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .section_3 li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #e21e27;
+  }
+
+  .section_3 ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer_logo {
+    width: 49px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .dansk_flag img {
+    width: 24px;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 20px;
+    border: none;
+    padding: 6px 20px;
+    gap: 8px;
+  }
+  /* Den røde pil */
+
+  @media (min-width: 1200px) {
+    .footer_container {
+      display: flex;
+      flex-direction: row;
+    }
+    .section_3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .rod_boks {
+      text-align: center;
+      padding: 70px;
+    }
+  }
+</style>

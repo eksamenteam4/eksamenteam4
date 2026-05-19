@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="da">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro Basics</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+        <a href="/">
+          <img src="img/logo.jpg" alt="Logo" />
+        </a>
+      </div>
+      <div class="nav-left">
+        <button class="burger" aria-label="Open menu">☰</button>
+      <nav class="menu">
+  <a href="/">Erhverv</a>
+  <a href="/info">Private</a>
+  <a href="/form">Dankort Øremærket</a>
+</nav>
+        </div>
+        </header>
+        <slot />
+    </body>
+</html>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+  .burger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    background: #e9e9e9;
+    justify-content: flex-end;
+    height: 90px;
+    align-items: center;
+    padding: 0 64px;
+  }
+
+
+  @media screen and (min-width: 900px) {
+    .burger {
+      display: none;
+    }
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+</style>
