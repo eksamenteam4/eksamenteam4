@@ -3,11 +3,18 @@ import Layout from '../layouts/Layout.astro';
 
 import Hero from '../components/Hero.astro';
 import Forms from '../components/Forms.astro';
-import ApplePayInfo from '../components/ApplePayInfo.astro';
+import ApplePay from '../components/ApplePay.astro';
 ---
 
 <Layout>
-  <Hero />
+ 
+<Hero
+  image="strand.webp"
+  heading='Få et <span class="red">Dankort</span> der giver noget tilbage'
+  title="Vi gør skiftet enkelt - på 3 nemme skridt"
+  description="Vi guider dig gennem hele processen, så du slipper for bank-bøvlet."
+  variant="hero--strand"
+/>
   <Forms />
-  <ApplePayInfo />
+  <ApplePay />
 </Layout>
