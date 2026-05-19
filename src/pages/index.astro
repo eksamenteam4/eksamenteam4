@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import InfoCard from '../components/InfoCard.astro';
 import Coffe from '../components/Coffe.astro';
@@ -12,18 +13,20 @@ import Projects from '../components/Projects.astro';
 import ApplePayInfo from '../components/ApplePayInfo.astro';
 import Partners from '../components/Partners.astro';
 import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
+<Header />
+
 <Hero
-  image="landskab.webp"
+  image="/img/landskab.webp"
   heading='<span class="red">Dankort</span> Øremærket'
   title="Det er sejt at give noget tilbage."
   description="Med Dankort Øremærket støtter du dansk natur — bare ved at betale som normalt."
   buttonText="Bestil dit Dankort her"
   variant="hero--landscape"
 />
-
   <InfoCard />
 
   <Coffe />
@@ -43,4 +46,7 @@ import Faq from '../components/Faq.astro';
   <Partners />
 
   <Faq />
+
+  <Footer />
+
 </Layout>
