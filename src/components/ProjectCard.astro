@@ -1,0 +1,45 @@
+---
+const{product}= Astro.props;
+---
+<a href=`details/${product.id}`>
+<article> 
+    <section class="top">
+        <h3 class="greybackground">{product.location}</h3>
+    <img src={product.image} alt="productimage"/>
+    </section>
+    <section class="cardtext">
+    <h3>{product.title}</h3>
+    <p> {product.short_description}</p>
+    <p> {product.area}</p>
+    </section>
+</article>
+</a>
+<style>
+    article{
+      border-radius: 30px;  
+      
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     margin: 10px;
+    }
+    img {
+        max-width: 100%;
+        
+    }
+    .top {
+position: relative;
+  display: inline-block;
+    }
+    .cardtext {
+        margin: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .greybackground {
+        background: rgba(128, 128, 128, 0.2);
+        border-radius: 5px;
+       padding: 5px;
+        font-size: small;
+    }
+
+    
+</style>
