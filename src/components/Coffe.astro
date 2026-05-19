@@ -1,0 +1,62 @@
+<!-- -------------HTML START------------- -->
+<section class="coffee">
+  <div class="coffee-text">
+    <h2 class="heading-3">En kaffe kan være med til at skabe mere natur</h2>
+    <p class="body-1">Små køb i hverdagen bliver til  store områder med vild natur.</p>
+  </div>
+</section>
+<!-- -------------HTML SLUT------------- -->
+
+<!-- -------------CSS START------------- -->
+<style>
+  .coffee {
+    min-height: 210px;
+    padding: 42px;
+    border-radius: var(--radius-card);
+    background-image:
+      linear-gradient(90deg, #00000099, #00000000),
+      url("/img/coffee.webp");
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+  }
+
+  .coffee-text {
+    max-width: 390px;
+    color: white;
+  }
+
+  .coffee-text h2 {
+    margin-bottom: 14px;
+    font-size: var(--small-card-heading-size);
+    line-height: var(--small-card-heading-line-height);
+  }
+
+  .coffee-text p {
+    margin-bottom: 0;
+    font-size: var(--small-card-body-size);
+    line-height: var(--small-card-body-line-height);
+  }
+
+  /* Mobil */
+  @media (max-width: 700px) {
+    .coffee {
+      min-height: 135px;
+      padding: 22px;
+      background-image:
+        linear-gradient(90deg, #000000b3, #00000033),
+        url("/img/coffee.webp");
+      background-position: center right;
+    }
+
+    .coffee-text {
+      max-width: 185px;
+    }
+
+    .coffee-text h2 {
+      margin-bottom: 8px;
+    }
+  }
+</style>
+<!-- -------------CSS SLUT------------- -->

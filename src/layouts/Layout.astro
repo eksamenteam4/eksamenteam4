@@ -1,23 +1,369 @@
+---
+const { title = "Dankort Øremærket" } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <div class="page">
+      <slot />
+    </div>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    --color-red: #ff0000;
+    --color-red-hover: #d90000;
+    --color-black: #111111;
+    --color-white: #ffffff;
+    --color-light: #f4f4f4;
+    --color-card-light: #f4f4f4;
+    --color-image-light: #f1ede7;
+    --color-border: #dddddd;
+
+    --font-main: "Raleway", Arial, sans-serif;
+    --font-regular: 400;
+    --font-extra-bold: 800;
+
+    --content-width: 1280px;
+    --mobile-content-width: 390px;
+    --page-margin: 56px;
+    --space-section: 64px;
+    --radius-card: 10px;
+
+    --h1-size: 40px;
+    --h1-line-height: 46px;
+    --h2-size: 30px;
+    --h2-line-height: 36px;
+    --h3-size: 22px;
+    --h3-line-height: 28px;
+    --h4-size: 18px;
+    --h4-line-height: 24px;
+
+    --subtitle-1-size: 18px;
+    --subtitle-1-line-height: 24px;
+    --subtitle-2-size: 15px;
+    --subtitle-2-line-height: 20px;
+    --body-1-size: 14px;
+    --body-1-line-height: 20px;
+
+    --small-card-heading-size: 24px;
+    --small-card-heading-line-height: 30px;
+    --small-card-body-size: 15px;
+    --small-card-body-line-height: 21px;
+
+    --button-large-size: 18px;
+    --button-large-line-height: 24px;
+    --button-medium-size: 16px;
+    --button-medium-line-height: 22px;
+    --button-small-size: 14px;
+    --button-small-line-height: 20px;
+
+    --button-height: auto;
+    --button-padding-y: 12px;
+    --button-padding-x: 28px;
+    --button-radius: 14px;
+    --button-gap: 24px;
+    --button-font-size: var(--button-medium-size);
+    --button-line-height: var(--button-medium-line-height);
+    --button-font-weight: var(--font-regular);
+
+    --text-small: var(--button-small-size);
+    --text-small-line-height: var(--button-small-line-height);
+    --text-medium: var(--body-1-size);
+    --text-medium-line-height: var(--body-1-line-height);
+    --text-base: var(--body-1-size);
+    --text-base-line-height: var(--body-1-line-height);
+    --heading-small: var(--h4-size);
+    --heading-small-line-height: var(--h4-line-height);
+    --heading-banner: var(--h4-size);
+    --heading-banner-line-height: var(--h4-line-height);
+    --heading-card: var(--h3-size);
+    --heading-card-line-height: var(--h3-line-height);
+    --heading-nature: var(--h3-size);
+    --heading-nature-line-height: var(--h3-line-height);
+    --heading-large: var(--h2-size);
+    --heading-large-line-height: var(--h2-line-height);
+    --step-number-size: 22px;
+    --icon-size: 18px;
+    --link-font-size: var(--button-small-size);
+    --link-line-height: var(--button-small-line-height);
+    --list-font-size: var(--button-small-size);
+    --list-line-height: var(--button-small-line-height);
+    --arrow-size: 16px;
+
+    --secondary-button-height: 42px;
+    --secondary-button-width: 240px;
+    --secondary-button-radius: 999px;
+    --secondary-button-font-size: var(--button-small-size);
+    --secondary-button-line-height: var(--button-small-line-height);
+
+    --mobile-text-small: var(--button-small-size);
+    --mobile-text-tiny: var(--button-small-size);
+    --mobile-list-font-size: var(--button-small-size);
+    --mobile-heading-small: var(--h4-size);
+    --mobile-heading-banner: var(--h4-size);
+    --mobile-heading-apple: var(--h4-size);
+    --mobile-heading-medium: var(--h4-size);
+    --mobile-heading-large: var(--h3-size);
+    --mobile-step-number-size: 16px;
+    --mobile-button-height: 34px;
+    --mobile-button-font-size: var(--button-small-size);
+    --mobile-secondary-button-width: 190px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-main);
+    color: var(--color-black);
+    background-color: var(--color-white);
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-white);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 24px 0 72px;
+    background-color: var(--color-white);
+  }
+
+  main {
+    width: 100%;
+  }
+
+  section {
+    width: min(calc(100% - (var(--page-margin) * 2)), var(--content-width));
+    margin: 0 auto var(--space-section);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin-top: 0;
+  }
+
+  h1,
+  .heading-1 {
+    font-family: var(--font-main);
+    font-size: var(--h1-size);
+    line-height: var(--h1-line-height);
+    font-weight: var(--font-extra-bold);
+  }
+
+  h2,
+  .heading-2 {
+    font-family: var(--font-main);
+    font-size: var(--h2-size);
+    line-height: var(--h2-line-height);
+    font-weight: var(--font-extra-bold);
+  }
+
+  h3,
+  .heading-3 {
+    font-family: var(--font-main);
+    font-size: var(--h3-size);
+    line-height: var(--h3-line-height);
+    font-weight: var(--font-extra-bold);
+  }
+
+  h4,
+  .heading-4 {
+    font-family: var(--font-main);
+    font-size: var(--h4-size);
+    line-height: var(--h4-line-height);
+    font-weight: var(--font-extra-bold);
+  }
+
+  p,
+  .body-1 {
+    font-family: var(--font-main);
+    font-size: var(--body-1-size);
+    line-height: var(--body-1-line-height);
+    font-weight: var(--font-regular);
+  }
+
+  .subtitle-1 {
+    font-family: var(--font-main);
+    font-size: var(--subtitle-1-size);
+    line-height: var(--subtitle-1-line-height);
+    font-weight: var(--font-regular);
+  }
+
+  .subtitle-2 {
+    font-family: var(--font-main);
+    font-size: var(--subtitle-2-size);
+    line-height: var(--subtitle-2-line-height);
+    font-weight: var(--font-regular);
+  }
+
+  .button-large {
+    font-size: var(--button-large-size);
+    line-height: var(--button-large-line-height);
+    font-weight: var(--font-regular);
+  }
+
+  .button-medium {
+    font-size: var(--button-medium-size);
+    line-height: var(--button-medium-line-height);
+    font-weight: var(--font-regular);
+  }
+
+  .button-small {
+    font-size: var(--button-small-size);
+    line-height: var(--button-small-line-height);
+    font-weight: var(--font-regular);
+  }
+
+  .button-red {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+    margin-right: auto;
+    gap: var(--button-gap);
+    min-height: var(--button-height);
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border: 0;
+    border-radius: var(--button-radius);
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+    font-weight: var(--button-font-weight);
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .button-red.button-large {
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+  }
+
+  .button-red.button-medium {
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+  }
+
+  .button-red.button-small {
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+  }
+
+  .button-red span {
+    font-size: var(--arrow-size);
+    line-height: 1;
+  }
+
+  .button-red:hover {
+    background-color: var(--color-red-hover);
+  }
+
+  /* Mindre skærme får mindre margin, så indholdet ikke bliver klemt */
+  @media (max-width: 900px) {
+    :root {
+      --page-margin: 24px;
+      --space-section: 32px;
+    }
+  }
+
+  /* Mobil: normal mobilbredde med lidt luft i siderne */
+  @media (max-width: 700px) {
+    :root {
+      --page-margin: 40px;
+      --space-section: 28px;
+      --h1-size: 34px;
+      --h1-line-height: 38px;
+      --h2-size: 30px;
+      --h2-line-height: 34px;
+      --h3-size: 16px;
+      --h3-line-height: 20px;
+      --h4-size: 14px;
+      --h4-line-height: 18px;
+      --subtitle-1-size: 13px;
+      --subtitle-1-line-height: 17px;
+      --subtitle-2-size: 11px;
+      --subtitle-2-line-height: 15px;
+      --body-1-size: 10px;
+      --body-1-line-height: 14px;
+      --small-card-heading-size: 18px;
+      --small-card-heading-line-height: 22px;
+      --small-card-body-size: 11px;
+      --small-card-body-line-height: 15px;
+      --button-height: auto;
+      --button-font-size: var(--mobile-button-font-size);
+      --button-line-height: var(--button-small-line-height);
+      --button-padding-y: 10px;
+      --button-padding-x: 20px;
+      --button-gap: 18px;
+      --secondary-button-width: var(--mobile-secondary-button-width);
+      --secondary-button-height: 36px;
+      --secondary-button-font-size: var(--button-small-size);
+      --secondary-button-line-height: var(--button-small-line-height);
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-width: 100%;
+      background-color: var(--color-white);
+      overflow-x: hidden;
+    }
+
+    .page {
+      width: 100vw;
+      max-width: none;
+      margin: 0;
+      padding: 14px 0 44px;
+      background-color: var(--color-white);
+      overflow-x: hidden;
+    }
+
+    main {
+      background-color: var(--color-white);
+    }
+
+    section {
+      width: min(
+        calc(100% - (var(--page-margin) * 2)),
+        var(--mobile-content-width)
+      );
+    }
+  }
 </style>
