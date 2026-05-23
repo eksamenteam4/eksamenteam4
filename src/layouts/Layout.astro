@@ -43,30 +43,30 @@ const { title = "Dankort Øremærket" } = Astro.props;
 
     --content-width: 1280px;
     --mobile-content-width: 390px;
-    --page-margin: 56px;
-    --space-section: 64px;
+    --page-margin: 40px;
+    --space-section: 28px;
     --radius-card: 10px;
 
-    --h1-size: 40px;
-    --h1-line-height: 46px;
-    --h2-size: 30px;
-    --h2-line-height: 36px;
-    --h3-size: 22px;
-    --h3-line-height: 28px;
-    --h4-size: 18px;
-    --h4-line-height: 24px;
+    --h1-size: 35px;
+    --h1-line-height: 39px;
+    --h2-size: 31px;
+    --h2-line-height: 35px;
+    --h3-size: 18px;
+    --h3-line-height: 22px;
+    --h4-size: 15px;
+    --h4-line-height: 19px;
 
-    --subtitle-1-size: 18px;
-    --subtitle-1-line-height: 24px;
-    --subtitle-2-size: 15px;
-    --subtitle-2-line-height: 20px;
-    --body-1-size: 14px;
-    --body-1-line-height: 20px;
+    --subtitle-1-size: 14px;
+    --subtitle-1-line-height: 18px;
+    --subtitle-2-size: 12px;
+    --subtitle-2-line-height: 16px;
+    --body-1-size: 11px;
+    --body-1-line-height: 15px;
 
-    --small-card-heading-size: 24px;
-    --small-card-heading-line-height: 30px;
-    --small-card-body-size: 15px;
-    --small-card-body-line-height: 21px;
+    --small-card-heading-size: 19px;
+    --small-card-heading-line-height: 23px;
+    --small-card-body-size: 12px;
+    --small-card-body-line-height: 16px;
 
     --button-large-size: 18px;
     --button-large-line-height: 24px;
@@ -76,12 +76,12 @@ const { title = "Dankort Øremærket" } = Astro.props;
     --button-small-line-height: 20px;
 
     --button-height: auto;
-    --button-padding-y: 12px;
-    --button-padding-x: 28px;
+    --button-padding-y: 10px;
+    --button-padding-x: 20px;
     --button-radius: 14px;
-    --button-gap: 24px;
-    --button-font-size: var(--button-medium-size);
-    --button-line-height: var(--button-medium-line-height);
+    --button-gap: 18px;
+    --button-font-size: var(--button-small-size);
+    --button-line-height: var(--button-small-line-height);
     --button-font-weight: var(--font-regular);
 
     --text-small: var(--button-small-size);
@@ -108,12 +108,6 @@ const { title = "Dankort Øremærket" } = Astro.props;
     --list-line-height: var(--button-small-line-height);
     --arrow-size: 16px;
 
-    --secondary-button-height: 42px;
-    --secondary-button-width: 240px;
-    --secondary-button-radius: 999px;
-    --secondary-button-font-size: var(--button-small-size);
-    --secondary-button-line-height: var(--button-small-line-height);
-
     --mobile-text-small: var(--button-small-size);
     --mobile-text-tiny: var(--button-small-size);
     --mobile-list-font-size: var(--button-small-size);
@@ -126,6 +120,12 @@ const { title = "Dankort Øremærket" } = Astro.props;
     --mobile-button-height: 34px;
     --mobile-button-font-size: var(--button-small-size);
     --mobile-secondary-button-width: 190px;
+
+    --secondary-button-height: 36px;
+    --secondary-button-width: var(--mobile-secondary-button-width);
+    --secondary-button-radius: 999px;
+    --secondary-button-font-size: var(--button-small-size);
+    --secondary-button-line-height: var(--button-small-line-height);
   }
 
   * {
@@ -136,6 +136,13 @@ const { title = "Dankort Øremærket" } = Astro.props;
     font-family: var(--font-main);
     color: var(--color-black);
     background-color: var(--color-white);
+  }
+
+  html,
+  body {
+    width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
@@ -153,19 +160,25 @@ const { title = "Dankort Øremærket" } = Astro.props;
   }
 
   .page {
-    width: 100%;
+    width: 100vw;
+    max-width: none;
     min-height: 100vh;
-    margin: 0 auto;
-    padding: 24px 0 72px;
+    margin: 0;
+    padding: 14px 0 44px;
     background-color: var(--color-white);
+    overflow-x: hidden;
   }
 
   main {
     width: 100%;
+    background-color: var(--color-white);
   }
 
   section {
-    width: min(calc(100% - (var(--page-margin) * 2)), var(--content-width));
+    width: min(
+      calc(100% - (var(--page-margin) * 2)),
+      var(--mobile-content-width)
+    );
     margin: 0 auto var(--space-section);
   }
 
@@ -295,75 +308,58 @@ const { title = "Dankort Øremærket" } = Astro.props;
     background-color: var(--color-red-hover);
   }
 
-  /* Mindre skærme får mindre margin, så indholdet ikke bliver klemt */
-  @media (max-width: 900px) {
+  @media (min-width: 701px) {
     :root {
       --page-margin: 24px;
       --space-section: 32px;
-    }
-  }
-
-  /* Mobil: normal mobilbredde med lidt luft i siderne */
-  @media (max-width: 700px) {
-    :root {
-      --page-margin: 40px;
-      --space-section: 28px;
-      --h1-size: 34px;
-      --h1-line-height: 38px;
-      --h2-size: 30px;
-      --h2-line-height: 34px;
-      --h3-size: 16px;
-      --h3-line-height: 20px;
-      --h4-size: 14px;
-      --h4-line-height: 18px;
-      --subtitle-1-size: 13px;
-      --subtitle-1-line-height: 17px;
-      --subtitle-2-size: 11px;
-      --subtitle-2-line-height: 15px;
-      --body-1-size: 10px;
-      --body-1-line-height: 14px;
-      --small-card-heading-size: 18px;
-      --small-card-heading-line-height: 22px;
-      --small-card-body-size: 11px;
-      --small-card-body-line-height: 15px;
-      --button-height: auto;
-      --button-font-size: var(--mobile-button-font-size);
-      --button-line-height: var(--button-small-line-height);
-      --button-padding-y: 10px;
-      --button-padding-x: 20px;
-      --button-gap: 18px;
-      --secondary-button-width: var(--mobile-secondary-button-width);
-      --secondary-button-height: 36px;
-      --secondary-button-font-size: var(--button-small-size);
-      --secondary-button-line-height: var(--button-small-line-height);
+      --h1-size: 42px;
+      --h1-line-height: 48px;
+      --h2-size: 32px;
+      --h2-line-height: 38px;
+      --h3-size: 24px;
+      --h3-line-height: 30px;
+      --h4-size: 19px;
+      --h4-line-height: 25px;
+      --subtitle-1-size: 19px;
+      --subtitle-1-line-height: 25px;
+      --subtitle-2-size: 16px;
+      --subtitle-2-line-height: 21px;
+      --body-1-size: 15px;
+      --body-1-line-height: 21px;
+      --small-card-heading-size: 25px;
+      --small-card-heading-line-height: 31px;
+      --small-card-body-size: 16px;
+      --small-card-body-line-height: 22px;
+      --button-padding-y: 12px;
+      --button-padding-x: 28px;
+      --button-gap: 24px;
+      --button-font-size: var(--button-medium-size);
+      --button-line-height: var(--button-medium-line-height);
+      --secondary-button-height: 42px;
+      --secondary-button-width: 240px;
     }
 
     html,
     body {
-      width: 100%;
-      min-width: 100%;
-      background-color: var(--color-white);
-      overflow-x: hidden;
+      overflow-x: visible;
     }
 
     .page {
-      width: 100vw;
-      max-width: none;
-      margin: 0;
-      padding: 14px 0 44px;
-      background-color: var(--color-white);
-      overflow-x: hidden;
-    }
-
-    main {
-      background-color: var(--color-white);
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 0 72px;
+      overflow-x: visible;
     }
 
     section {
-      width: min(
-        calc(100% - (var(--page-margin) * 2)),
-        var(--mobile-content-width)
-      );
+      width: min(calc(100% - (var(--page-margin) * 2)), var(--content-width));
+    }
+  }
+
+  @media (min-width: 901px) {
+    :root {
+      --page-margin: 56px;
+      --space-section: 64px;
     }
   }
 </style>

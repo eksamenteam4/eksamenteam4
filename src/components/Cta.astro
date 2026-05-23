@@ -3,13 +3,13 @@
   <div class="cta-text">
     <h2 class="heading-3">Hver betaling gør en forskel for dansk natur</h2>
     <p class="body-1">
-      Med Dankort støtter du naturprojekter, der arbejder for mere vild natur
+      Med Dankort støtter du naturprojekter, der skaber mere vild natur
       og bedre levevilkår for dyr, planter og mennesker.
     </p>
   </div>
 
   <a class="button-red button-medium" href="/form/">
-    Bestil dit Dankort
+    Se om du har Dankort
     <span>→</span>
   </a>
 </section>
@@ -18,9 +18,9 @@
 <!-- -------------CSS START------------- -->
 <style>
   .cta {
-    min-height: 110px;
-    padding: 40px 32px;
-    border-radius: var(--radius-card);
+    min-height: 295px;
+    padding: 44px 42px 40px;
+    border-radius: 18px;
     background-image:
       linear-gradient(90deg, #00000099, #00000020),
       url("/img/leafs.webp");
@@ -30,42 +30,66 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 20px;
+    gap: 32px;
   }
 
   .cta-text {
-    max-width: 520px;
+    max-width: 300px;
     color: white;
   }
 
   .cta-text h2 {
-    margin-bottom: 8px;
-    font-size: var(--small-card-heading-size);
-    line-height: var(--small-card-heading-line-height);
+    margin-bottom: 14px;
+    font-size: 28px;
+    line-height: 32px;
   }
 
   .cta-text p {
+    max-width: 300px;
     margin-bottom: 0;
-    font-size: var(--small-card-body-size);
-    line-height: var(--small-card-body-line-height);
+    font-size: 15px;
+    line-height: 21px;
   }
 
-  /* Mobil */
-  @media (max-width: 700px) {
+  .cta .button-red {
+    min-width: 235px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  @media (min-width: 701px) {
     .cta {
-      min-height: 155px;
-      padding: 28px 22px;
-      background-position: center;
+      min-height: 110px;
+      padding: 40px 32px;
+      border-radius: var(--radius-card);
+      gap: 20px;
     }
 
     .cta-text {
-      max-width: 230px;
+      max-width: 520px;
     }
 
     .cta-text h2 {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      font-size: var(--small-card-heading-size);
+      line-height: var(--small-card-heading-line-height);
     }
 
+    .cta-text p {
+      max-width: none;
+      font-size: var(--small-card-body-size);
+      line-height: var(--small-card-body-line-height);
+    }
+
+    .cta .button-red {
+      min-width: 0;
+      padding-top: var(--button-padding-y);
+      padding-bottom: var(--button-padding-y);
+      font-size: var(--button-font-size);
+      line-height: var(--button-line-height);
+    }
   }
 </style>
 <!-- -------------CSS SLUT------------- -->

@@ -10,11 +10,11 @@
 <!-- -------------CSS START------------- -->
 <style>
   .coffee {
-    min-height: 210px;
-    padding: 42px;
+    min-height: 225px;
+    padding: 44px 34px;
     border-radius: var(--radius-card);
     background-image:
-      linear-gradient(90deg, #00000099, #00000000),
+      linear-gradient(90deg, #000000b3, #00000033),
       url("/img/coffee.webp");
     background-size: cover;
     background-position: center right;
@@ -23,12 +23,12 @@
   }
 
   .coffee-text {
-    max-width: 390px;
+    max-width: 310px;
     color: white;
   }
 
   .coffee-text h2 {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     font-size: var(--small-card-heading-size);
     line-height: var(--small-card-heading-line-height);
   }
@@ -39,23 +39,21 @@
     line-height: var(--small-card-body-line-height);
   }
 
-  /* Mobil */
-  @media (max-width: 700px) {
+  @media (min-width: 701px) {
     .coffee {
-      min-height: 135px;
-      padding: 22px;
+      min-height: 210px;
+      padding: 42px;
       background-image:
-        linear-gradient(90deg, #000000b3, #00000033),
+        linear-gradient(90deg, #00000099, #00000000),
         url("/img/coffee.webp");
-      background-position: center right;
     }
 
     .coffee-text {
-      max-width: 185px;
+      max-width: 390px;
     }
 
     .coffee-text h2 {
-      margin-bottom: 8px;
+      margin-bottom: 14px;
     }
   }
 </style>
