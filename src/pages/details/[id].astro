@@ -23,7 +23,7 @@ const { product  } = Astro.props;
 ---
 <Layout>
 <article >
-    <a href="../../pages/index.astro"> Tilbage til projekter</a> 
+    <a href="/#projekter"> Tilbage til projekter</a> 
   <section class="top">
     <div class="toptext">
     <h3 class="location-badge">{product.location}</h3>
@@ -49,8 +49,11 @@ const { product  } = Astro.props;
   </div>
 
   <div class="greenbackground">
+    <div>
     <h2>Hvad betyder din betaling?</h2>
     <p class="longtext">{product.payment}</p>
+    </div>
+    <img src="/img/productdetails.webp" alt="trees"/>
   </div>
   </section>
 </article>
@@ -130,11 +133,16 @@ padding-bottom: 30px;
     border-radius: 30px;
     padding: 30px;
    margin-top: 50px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
 }
 
 	 @media (max-width: 900px) {
 .inline {
 display: block;
+}
+.greenbackground {
+    display: block;
 }
      }
 </style>
