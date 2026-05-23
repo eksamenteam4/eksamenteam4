@@ -1,4 +1,5 @@
 ---
+
 import Layout from '../../layouts/Layout.astro';
 export async function getStaticPaths() {
     const endpoint = "https://appumwlllsxyfwtyvmsg.supabase.co/rest/v1/projects?select=*";
@@ -23,17 +24,19 @@ const { product  } = Astro.props;
 ---
 <Layout>
 <article >
-    <a href="/#projekter"> Tilbage til projekter</a> 
-  <section class="top">
+   
+  <div class="top">
+     
     <div class="toptext">
+        <a href="/#projekter"> Tilbage til projekter</a> 
     <h3 class="location-badge">{product.location}</h3>
     <h2>{product.title}</h2>
-    <p class="description">
+    <h4 class="description">
       {product.short_description}
     </p>
     </div>
     <img src={product.image} alt="productimage" />
-  </section>
+</div>
 
     <section class="cardtext">
     
@@ -44,13 +47,13 @@ const { product  } = Astro.props;
     </div>
   
   <div class="hvorfortext">
-    <h2>Hvorfor støtter vi dette område?</h2>
+    <h3>Hvorfor støtter vi dette område?</h2>
     <p class="longtext">{product.about}</p>
   </div>
 
   <div class="greenbackground">
     <div>
-    <h2>Hvad betyder din betaling?</h2>
+    <h3>Hvad betyder din betaling?</h2>
     <p class="longtext">{product.payment}</p>
     </div>
     <img src="/img/productdetails.webp" alt="trees"/>
@@ -63,12 +66,15 @@ const { product  } = Astro.props;
 </Layout>
 <style>
 
- 
+ h2, h4, a {
+    color: white;
+    text-decoration: none;
+ }
 
 /* IMAGE SECTION */
 .top {
   position: relative;
-  height: 280px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -79,14 +85,15 @@ const { product  } = Astro.props;
   display: block;
 }
 .location-badge {
-  top: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.5);
   color: #4f6f52;
-  
+  border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   backdrop-filter: blur(6px);
   z-index: 2;
+  margin-top: 15px;
+  padding: 5px;
 }
 .toptext {
     position: absolute;
@@ -103,7 +110,7 @@ const { product  } = Astro.props;
   border-radius: 30px;
   overflow: hidden; 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  margin: 50px;
+  margin-top: 50px;
 padding-top: 40px;
 }
 
