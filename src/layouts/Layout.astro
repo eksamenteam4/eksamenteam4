@@ -42,26 +42,26 @@ const { title = "Dankort Øremærket" } = Astro.props;
     --font-extra-bold: 800;
 
     --content-width: 1280px;
-    --mobile-content-width: 390px;
-    --page-margin: 40px;
+    --mobile-content-width: 100%;
+    --page-margin: 25px;
     --space-section: 28px;
     --radius-card: 10px;
 
-    --h1-size: 35px;
+    --h1-size: 28px;
     --h1-line-height: 39px;
-    --h2-size: 31px;
+    --h2-size: 25px;
     --h2-line-height: 35px;
-    --h3-size: 18px;
+    --h3-size: 20px;
     --h3-line-height: 22px;
-    --h4-size: 15px;
+    --h4-size: 18px;
     --h4-line-height: 19px;
 
     --subtitle-1-size: 14px;
     --subtitle-1-line-height: 18px;
     --subtitle-2-size: 12px;
     --subtitle-2-line-height: 16px;
-    --body-1-size: 11px;
-    --body-1-line-height: 15px;
+    --body-1-size: 14px;
+    --body-1-line-height: 1.5;
 
     --small-card-heading-size: 19px;
     --small-card-heading-line-height: 23px;
@@ -164,7 +164,7 @@ const { title = "Dankort Øremærket" } = Astro.props;
     max-width: none;
     min-height: 100vh;
     margin: 0;
-    padding: 14px 0 44px;
+    padding-bottom: 40px;
     background-color: var(--color-white);
     overflow-x: hidden;
   }
@@ -311,7 +311,7 @@ const { title = "Dankort Øremærket" } = Astro.props;
   @media (min-width: 701px) {
     :root {
       --page-margin: 24px;
-      --space-section: 32px;
+      --space-section: 50px;
       --h1-size: 42px;
       --h1-line-height: 48px;
       --h2-size: 32px;
@@ -347,7 +347,7 @@ const { title = "Dankort Øremærket" } = Astro.props;
     .page {
       width: 100%;
       margin: 0 auto;
-      padding: 24px 0 72px;
+      padding-bottom: 40px;
       overflow-x: visible;
     }
 
@@ -356,10 +356,5 @@ const { title = "Dankort Øremærket" } = Astro.props;
     }
   }
 
-  @media (min-width: 901px) {
-    :root {
-      --page-margin: 56px;
-      --space-section: 64px;
-    }
-  }
+  
 </style>

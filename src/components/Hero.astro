@@ -21,9 +21,11 @@ const {
     <p>{description}</p>
 
     {buttonText && (
+      <a  href="/form/">
       <button class="bestil">
         {buttonText} <span>→</span>
       </button>
+      </a>
     )}
   </div>
 </section>
@@ -50,15 +52,19 @@ const {
 
   .sejt {
     position: absolute;
-    bottom: 100px;
-    left: 80px;
+    bottom: 60px;
+    left: 40px;
     color: white;
   }
 
   .dankort {
     position: absolute;
-    top: 40px;
-    right: 70px;
+    top: 15px;
+    padding-right: 10px;
+  }
+
+  h1 {
+font-size: 3vw;
   }
 
   .hero_picture{
@@ -67,11 +73,20 @@ const {
 
   /* VARIATION 1 */
   .hero--landscape .dankort {
-    right: 120px;
+    right: 20px;
   }
 
   /*VARIATION 2 */
   .hero--strand .dankort {
-    right: 45px;
+    right: 20px;
+  }
+    @media screen and (min-width: 701px) {
+    .dankort {
+    top: 40px;
+  }
+    .sejt {
+    bottom: 100px;
+    left: 80px;
+    }
   }
 </style>

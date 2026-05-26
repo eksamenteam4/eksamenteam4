@@ -13,20 +13,26 @@ const data = await fetch (endpoint, options).then((response)=>response.json());
 console.log(data);
 ---
 <Layout>
-	
-	<h2>Her har vi støttet Dansk natur</h2>
 	<section>
+	<h2>Her har vi støttet Dansk natur</h2>
+	
+    <div class="sectiongrid">
 	{data.map((product)=> <ProjectCard {product}/> )}
-	</section>
+    </div>
+    </section>
+    
 </Layout>
 <style>
-	section {
+	.sectiongrid {
 		display: grid;
-		grid-template-columns:1fr 1fr 1fr 1fr;
+		grid-template-columns:1fr 1fr ;
 	}
-	 @media (max-width: 900px) {
-    section {
-      grid-template-columns: 1fr 1fr;
+   
+
+	 @media (min-width: 701px) {
+    .sectiongrid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
+  
 </style>
