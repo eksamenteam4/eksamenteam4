@@ -22,26 +22,30 @@ const{product}= Astro.props;
      margin: 10px;
      height: 400px;
     }
+    a {
+        text-decoration: none;
+    }
  
     .top {
   position: relative;
   width: 100%;
   height: 50%; 
   overflow: hidden;
+  margin-bottom: 10px;
     }
 
        img {
         width: 100%;
   height: 100%;
-  object-fit: cover;  
     display: block;
     }
 
     .cardtext {
-        margin: 15px;
-         display: flex;
-  flex-direction: column;
+         margin:15px;
+           width: auto; 
     }
+    
+
     .greybackground {
         position: absolute;
   top: 10px;
@@ -50,7 +54,7 @@ const{product}= Astro.props;
   border-radius: 5px;
   padding: 3px;
   font-size: small;
-  z-index: 2;
+  
     }
 
     
