@@ -17,9 +17,13 @@ const { title = "Dankort Øremærket" } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
   </head>
 
   <body>
+   <div class="top-banner">
+ Dette er et skoleprojekt
+</div>
     <div class="page">
       <slot />
     </div>
@@ -43,7 +47,7 @@ const { title = "Dankort Øremærket" } = Astro.props;
 
     --content-width: 1280px;
     --mobile-content-width: 100%;
-    --page-margin: 25px;
+    --page-margin: 30px;
     --space-section: 28px;
     --radius-card: 10px;
 
@@ -307,6 +311,19 @@ const { title = "Dankort Øremærket" } = Astro.props;
   .button-red:hover {
     background-color: var(--color-red-hover);
   }
+  .top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
 
   @media (min-width: 701px) {
     :root {

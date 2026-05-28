@@ -34,7 +34,7 @@ const { product  } = Astro.props;
   <div class="top">
      
     <div class="toptext">
-        <a href="/#projekter"> Tilbage til projekter</a> 
+        <a href="/#projekter"> <span>←</span>Tilbage til projekter</a> 
     <h3 class="location-badge">{product.location}</h3>
     <h2>{product.title}</h2>
     <h4 class="description">
@@ -91,6 +91,7 @@ const { product  } = Astro.props;
   object-fit: cover;
   display: block;
 }
+
 .location-badge {
   background: rgba(255, 255, 255, 0.5);
   color: #4f6f52;
@@ -134,18 +135,18 @@ padding-bottom: 30px;
 .area {
   width: fit-content;
   padding: 10px 16px;
-  background: #dcebd8;
+  background: #A1EAAC;
   border-radius: 16px;
   color: #4f6f52;
   justify-self: center;
 }
 
 .longtext {
-    max-width: 60%;
+    max-width: 450px;
 }
 
 .greenbackground {
-    background-color: #D0EBD4;
+    background-color: #81D979;
     border-radius: 30px;
     padding: 30px;
    margin-top: 50px;
@@ -160,5 +161,8 @@ display: block;
 .greenbackground {
     display: block;
 }
+     }
+     .longtext {
+        max-width: 500px;
      }
 </style>

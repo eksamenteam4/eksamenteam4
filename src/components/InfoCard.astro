@@ -7,7 +7,7 @@
     
     <!-- ventre side -->
     <div class="info-card__text">
-      <h2>Kortet til alt det, du allerede betaler for</h2>
+      <h2>Kortet til alt det,<br /> du allerede betaler for</h2>
       <p>Kaffe, take-away, shopping, transport og byture. Dankort er lavet til hverdagsbetalinger — uden at du skal tænke over det.</p>
 
       <a href="#" class="info-card__button">
@@ -21,7 +21,7 @@
   <img src="/img/festival.webp" alt="Festival">
 
   <div class="info-card__overlay">
-    <h2>Festivalbilletten kan blive billigere</h2>
+    <h2>Festivalbilletten <br />kan blive billigere</h2>
     <p>Når butikker betaler mindre i gebyrer, kan det være med til at give bedre priser på det, du allerede køber — også billetter, mad og drikke.</p>
   </div>
 </div>
@@ -32,15 +32,18 @@
 <style>
   .info-card {
     grid-template-columns: 1fr 1fr;
+   
   }
 
   .info-card__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  
+  p{
+    max-width: 400px;
+  }
 
   /* venstre side */
   .info-card__text {
@@ -97,9 +100,9 @@
   }
 
   /* RESPONSIV */
-  @media (max-width: 768px) {
+  @media (min-width: 701px) {
     .info-card__grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

@@ -60,14 +60,14 @@
 
   .map__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
   .map__text,
   .map__image,
   .map__stats {
-    background: #E8F5EA;
+    background: #A1EAAC;
     border-radius: 16px;
     padding: 1.5rem;
   }
@@ -124,9 +124,11 @@
   }
 
   /* RESPONSIVE */
-  @media (max-width: 900px) {
+  @media (min-width: 701px) {
     .map__grid {
-      grid-template-columns: 1fr;
+      
+      grid-template-columns: 1fr 1fr 1fr;
+    
     }
 
     .map__stats-grid {
