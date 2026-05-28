@@ -20,11 +20,12 @@ const{product}= Astro.props;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
      margin: 10px;
-     height: 400px;
+     height: 350px;
     }
     a {
         text-decoration: none;
     }
+    
  
     .top {
   position: relative;
@@ -42,7 +43,8 @@ const{product}= Astro.props;
 
     .cardtext {
          margin:15px;
-           width: auto; 
+           width: auto;
+            
     }
     
 
@@ -56,6 +58,8 @@ const{product}= Astro.props;
   font-size: small;
   
     }
-
+ @media (min-width: 900px) {
+    article {height: 400px;}
+ }
     
 </style>
