@@ -17,7 +17,7 @@ const {
   </div>
 
   <div class="sejt">
-    <h1>{title}</h1>
+    <h2>{title}</h2>
     <p>{description}</p>
 
     {buttonText && (
@@ -52,20 +52,28 @@ const {
 
   .sejt {
     position: absolute;
-    bottom: 60px;
-    left: 40px;
+    bottom: 20px;
+    left: 20px;
     color: white;
+    max-width: 450px;
+    
   }
 
   .dankort {
     position: absolute;
-    top: 15px;
+    top: 10px;
     padding-right: 10px;
+    max-width: 35%;
   }
 
   h1 {
-font-size: 3vw;
+    font-size: 3vw;
   }
+  h2 {
+font-size: clamp(28px, 3vw, 42px) ;
+  }
+
+  
 
   .hero_picture{
     position: relative;
@@ -87,6 +95,7 @@ font-size: 3vw;
     .sejt {
     bottom: 100px;
     left: 80px;
+    max-width: 100%;
     }
   }
 </style>
